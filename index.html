@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              secondary: "#F9F7F3",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-secondary">
+    <div class="container mx-auto">
+      <header
+        id="header"
+        class="flex justify-between py-6 items-center">
+        <button
+          id="btn-blog"
+          class="btn btn-active bg-primary text-xl font-semibold">
+          Blog
+        </button>
+        <div class="flex items-center gap-4">
+          <img
+            src="./img/logo.png"
+            alt=""
+            class="w-[48px]" />
+          <h1 class="font-semibold text-xl">Donate Bangladesh</h1>
+        </div>
+        <div class="flex gap-3">
+          <img
+            src="./img/coin.png"
+            alt=""
+            class="w-[28px] h-[28px]" />
+          <div
+            id="my-balance"
+            class="flex gap-2">
+            <p
+              id="balance"
+              class="font-medium text-xl">
+              5500
+            </p>
+            <p class="font-medium text-xl">BDT</p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div
+      id="wrapper"
+      class="bg-white pt-20">
+      <div class="container mx-auto">
+        <div
+          id="button-wrapper"
+          class="flex justify-center gap-4 mb-8">
+          <button
+            id="btn-blog"
+            class="btn bg-primary text-xl font-semibold">
+            Donation
+          </button>
+          <button
+            id="btn-blog"
+            class="btn btn-outline text-xl font-semibold">
+            History
+          </button>
+        </div>
+        <div id="cards">
+          <div
+            id="campaign-1"
+            class="card card-side bg-base-100 border border-gray-300 p-6">
+            <figure class="w-2/4">
+              <img
+                src="./img/noakhali.png"
+                alt="noakhali" />
+            </figure>
+            <div class="card-body w-2/4">
+              <div
+                id="campaign-1-total"
+                class="flex gap-2 bg-gray-200 self-start px-4 py-3 rounded-lg">
+                <img
+                  src="./img/coin.png"
+                  alt=""
+                  class="w-[24px] h-[24px]" />
+                <p id="camp-1-total">0</p>
+              </div>
+              <h2 class="card-title text-xl font-bold">
+                Donate for Flood at Noakhali, Bangladesh
+              </h2>
+              <p class="font-light text-base">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+              <div class="flex flex-col gap-4">
+                <input
+                  id="camp-1-input"
+                  class="w-full bg-white rounded-lg p-4 text-base font-light border border-gray-200"
+                  type="text"
+                  placeholder="Write Donation Amount" />
+                <button
+                  id="camp-1-btn"
+                  onclick="my_modal_1.showModal()"
+                  class="btn bg-primary w-full text-xl font-semibold">
+                  Donate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog
+      id="my_modal_1"
+      class="modal">
+      <div class="modal-box flex flex-col items-center">
+        <h3 class="text-2xl font-bold mb-4">Congrates!</h3>
+        <div class="flex items-center gap-3">
+          <img
+            src="./img/coin.png"
+            alt=""
+            class="w-[24px] h-[24px]" />
+          <p id="donated-amount">500 <span>BDT</span></p>
+        </div>
+        <p class="py-4">Your are donated for humankind</p>
+        <p><strong>successfully</strong></p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
