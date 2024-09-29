@@ -71,7 +71,7 @@
             <p
               id="balance"
               class="font-medium text-xl">
-              5500
+              5510
             </p>
             <p class="font-medium text-xl">BDT</p>
           </div>
@@ -128,10 +128,17 @@
               </p>
               <div class="flex flex-col gap-4">
                 <input
+                  onkeyup="inputCheck()"
                   id="camp-1-input"
                   class="w-full bg-white rounded-lg p-4 text-base font-light border border-gray-200"
                   type="text"
-                  placeholder="Write Donation Amount" />
+                  placeholder="Write Donation Amount"
+                  required />
+                <p
+                  id="error"
+                  class="text-red-600 hidden">
+                  Invalid Input. Please enter a valid amount
+                </p>
                 <button
                   id="camp-1-btn"
                   onclick="my_modal_1.showModal()"
