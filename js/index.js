@@ -49,6 +49,8 @@ campOneBtn.addEventListener("click", (e) => {
     alert("Your balance is 0. Please add coin to make donation");
   }
 
+  //history
+
   console.log(getBalance);
 });
 // getBalance.addEventListener("click", () => {
